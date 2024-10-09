@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MY COCCNUTNAT</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #d800d8;
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+        position: relative;
+      }
+      .flower-art {
+        margin-top: 20px;
+      }
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        color: #d800d8;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        position: relative;
+      }
+      button:hover {
+        background-color: #e0e0e0;
+      }
+    </style>
+    <script>
+      let noClickCount = 0;
+
+      function WILL_YOU_MARRY_ME() {
+        document.body.innerHTML = `
+          <h1>MIKA ELLA L ROMERO</h1>
+          <h1>WILL YOU MARRY ME IN THE FUTURE??</h1>
+          <button onclick="YES()">Yes</button>
+          <button id="noBtn" onclick="NO()">No</button>
+        `;
+      }
+      function TRYAGAIN() {
+        document.body.innerHTML = `
+          <h1>MIKA ELLA L ROMERO</h1>
+          <h1>WILL YOU MARRY ME IN THE FUTURE??</h1>
+          <button onclick="YES()">Yes</button>
+          <p>HEHE NO CHOICE KANA:></p>
+          
+        `;
+      }
+      
+      function OUM() {
+        document.body.innerHTML = `
+          <h1>DO YOU PROMISE??</h1>
+          <button id="noBtn" onclick="PROMISE()">I PROMISE.</button>
+           <button id="noBtn" onclick="NI()">NO</button>
+        `;
+      }
+      
+      function PROMISE() {
+        document.body.innerHTML = `
+          <h1>KISS MKO:></h1>
+          <h2>HEHEHEHE :)</h2>
+        `;
+      }
+      
+       function NI() {
+        document.body.innerHTML = `
+          <h1>NO CHOICE KA HEHE MWAH!:></h1>
+          <h1>DO YOU PROMISE??</h1>
+          <button id="noBtn" onclick="PROMISE()">I PROMISE.</button>
+          
+        `;
+      }
+     
+
+      function YES() {
+        document.body.innerHTML = `
+          <h1>YAY!!!</h1>
+          <h2>I LOVE YOU SO SOOOOOOOOOOOOO MUCHH BABYYY!!</h2>
+          <p>I WILL NEVER GET TIRED OF WAITING FORYOUU BABYY!!</p>
+          <P>YOURE THE ONE I WANTT TOO MARRY</p>
+          
+          <pre>
+            🌷💍🌷💍
+           💍🌷💍🌷💍
+        /ᐠ  💍🌷💍🌷💍
+     ( ˶ᵔ ᵕ ᵔ💍🌷💍
+      \\ つ \\     /
+       U U  / 🎀 \\
+          </pre>
+          <p> ITS JUST YOU AND ME IN THE END LANG HA</p> 
+          <button id="noBtn" onclick="OUM()">OUM!</button>
+        `;
+      }
+
+      function NO() {
+        noClickCount++;
+        const noBtn = document.getElementById("noBtn");
+
+        if (noClickCount === 1) {
+          moveButtonRandomly(noBtn);
+          
+        } else if (noClickCount === 2) {
+          moveButtonRandomly(noBtn);
+          
+        }  else if (noClickCount === 3) {
+          moveButtonRandomly(noBtn);
+          
+        } else if (noClickCount >= 4 ) {
+          document.body.innerHTML = `
+            <h1>BAT KA NAG NO??</h1>
+          <h1>D MOKO LAB:<</h1>
+          <button onclick="TRYAGAIN()">TRY AGAIN</button>
+          
+            <pre>
+              
+            </pre>
+          `;
+        }
+      }
+           
+      
+      function moveButtonRandomly(button) {
+        // Move the button to a random position within the page.
+        const x = Math.floor(Math.random() * (window.innerWidth - button.offsetWidth)) + 'px';
+        const y = Math.floor(Math.random() * (window.innerHeight - button.offsetHeight)) + 'px';
+        button.style.position = 'absolute';
+        button.style.left = x;
+        button.style.top = y;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>HI BABE!</h1>
+    <h2>Syempre purple fav mo ei :)</h2>
+
+    <!-- Flower Art -->
+    <div class="flower-art">
+      <pre>
+        🌷🌸🌷🌸
+       🌸🌷🌸🌷🌸
+  /ᐠ  🌷🌸🌷🌸🌷
+ ( ˶ᵔ ᵕ ᵔ🌷🌸🌷
+  \\つ \\      /
+   U U  / 🎀 \\
+      </pre>
+    </div>
+    <p>FLOWERS HEHE :)</p>
+
+    <!-- Next Button -->
+    <button onclick="WILL_YOU_MARRY_ME()">Next</button>
+  </body>
+</html>
